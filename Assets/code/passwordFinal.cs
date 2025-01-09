@@ -4,12 +4,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class password3 : MonoBehaviour
+public class passwordFinal : MonoBehaviour // the is for the final password of the game; this had to be made in order to load a new sense
 {
     public TMP_InputField code;
     public string password = "Hi"; // fake password; public makes it editable in the unity engine
     public GameObject enter;
-    public AudioSource wrong;
+    public AudioSource wrong; ew
     public AudioSource right;
     // Start is called before the first frame update
 
@@ -30,6 +30,7 @@ public class password3 : MonoBehaviour
     {
         if (code.text == password)
         {
+        //if the pass word is correct
             Debug.Log("correct");
             code.text = "Correct";
             StartCoroutine(RightAnswer(0.5f));
@@ -37,11 +38,11 @@ public class password3 : MonoBehaviour
         }
         else
         {
-
+//if the password is wrong
             code.text = "Incorrect";
             wrong.Play();
 
-            StartCoroutine(ClearTextAfterDelay(0.5f)); // 2 seconds delay
+            StartCoroutine(ClearTextAfterDelay(0.5f)); // 2 seconds delay; afterwads the text will clear
         }
     }
 
@@ -60,7 +61,7 @@ public class password3 : MonoBehaviour
         yield return new WaitForSeconds(delay);
         SceneManager.LoadScene("Final");
 
-
+// loads the last sense of the game
         code.text = password;
     }
 }
