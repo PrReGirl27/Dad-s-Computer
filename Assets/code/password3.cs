@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class password3 : MonoBehaviour
 {
     public TMP_InputField code;
-    public string password = "Hi";
+    public string password = "Hi"; // fake password; public makes it editable in the unity engine
     public GameObject enter;
     public AudioSource wrong;
     public AudioSource right;
