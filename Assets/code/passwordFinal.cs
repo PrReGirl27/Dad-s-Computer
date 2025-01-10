@@ -59,8 +59,6 @@ public class passwordFinal : MonoBehaviour // this is for the final password of 
 
         yield return new WaitForSeconds(delay); // wait for 2 second for the text field to say correct
         SceneManager.LoadScene("Final"); // load the final scene
-
-// loads the last sense of the game
-        code.text = password;
+        code.text = password; // put the password into the text field
     }
 }
