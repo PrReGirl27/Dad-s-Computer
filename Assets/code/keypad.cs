@@ -9,8 +9,8 @@ using UnityEngine;
 
 public class keypad : MonoBehaviour
 {
-    public TMP_InputField code;
-    public GameObject button1; 
+    public TMP_InputField code; // where the numbers will appear
+    public GameObject button1; // each button on the keypad
     public GameObject button2;
     public GameObject button3;
     public GameObject button4;
@@ -24,13 +24,13 @@ public class keypad : MonoBehaviour
     public GameObject clear;
     public string password = "";
 
-    public GameObject openNew;
-    public GameObject closeThis;
+    public GameObject openNew; // the new panel that will be opened if the passwords is correct
+    public GameObject closeThis; // the keypad that will close if the password is correct
 
     public AudioSource wrong;
     public AudioSource right;
 
-    public void b1()
+    public void b1() // when each button is clicked it will display that number
     {
         code.text = code.text + "1";
     }
@@ -79,7 +79,7 @@ public class keypad : MonoBehaviour
     {
         code.text = code.text + "0";
     }
-    public void eventClear()
+    public void eventClearTheText()
     {
         code.text = "";
     }
@@ -88,14 +88,15 @@ public class keypad : MonoBehaviour
     {
         if (code.text == password)
         {
+        //if the password is correct
             Debug.Log("correct");
             code.text = "Correct";
-            StartCoroutine(RightAnswer(0.5f));
+            StartCoroutine(RightAnswer(0.5f)); // 2 seconds delay
             right.Play();   
         }
         else
         {
-          
+         // if the password is wrong 
             code.text = "Incorrect";
             wrong.Play();
 
@@ -117,11 +118,10 @@ public class keypad : MonoBehaviour
         
         yield return new WaitForSeconds(delay);
 
-        
+        // if the password is correct then it will open a new panel, put in the password, and close the keypad
         openNew.SetActive(true);
         closeThis.SetActive(false);
         code.text = password;
     }
   
 }
-// Start is called before the first frame update
