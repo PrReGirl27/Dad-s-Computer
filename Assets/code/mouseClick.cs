@@ -11,7 +11,7 @@ public class mouseClick : MonoBehaviour
     {
         if (canPlay)
         {
-if (Input.GetMouseButtonDown(0) == true)
+if (Input.GetMouseButtonDown(0) == true) // if the mouse button is clicked then play a sound
         {
             playSound();
         }
