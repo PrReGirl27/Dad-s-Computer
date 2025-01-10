@@ -34,13 +34,13 @@ public class password2 : MonoBehaviour
             Debug.Log("correct");
             code.text = "Correct";
             StartCoroutine(RightAnswer(0.5f)); // 2 seconds delay
-            right.Play();
+            right.Play(); // play "correct" sound
         }
         else
         {
 //if the password is wrong
             code.text = "Incorrect";
-            wrong.Play();
+            wrong.Play(); // play wrong sound
           
 
             StartCoroutine(ClearTextAfterDelay(0.5f)); // 2 seconds delay; afterwads the text will clear
@@ -59,11 +59,9 @@ public class password2 : MonoBehaviour
     IEnumerator RightAnswer(float delay)
     {
 
-        yield return new WaitForSeconds(delay);
-
-
+        yield return new WaitForSeconds(delay); // wait for 2 second for the text field to say correct
         openNew.SetActive(true); // open a new panel
-        code.text = password;
+        code.text = password; // put the password into the text field
 
     }
 
