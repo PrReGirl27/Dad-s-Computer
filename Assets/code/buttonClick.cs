@@ -13,6 +13,7 @@ public class buttonClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     }
     public void OnPointerDown(PointerEventData eventData)
     {
+    // when the mouse clicks a button a noise will play and the mouse click sound will not
         playSound();
         mouseClick.canPlay = false;
 
@@ -27,6 +28,7 @@ public class buttonClick : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
 
     public void OnPointerUp(PointerEventData eventData)
     {
+// now the mouse click sound can play
       mouseClick.canPlay = true;    
     }
 }
