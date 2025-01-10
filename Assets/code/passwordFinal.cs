@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class passwordFinal : MonoBehaviour // the is for the final password of the game; this had to be made in order to load a new sense
+public class passwordFinal : MonoBehaviour // this is for the final password of the game; this had to be made in order to load a new sense
 {
     public TMP_InputField code;
     public string password = "Hi"; // fake password; public makes it editable in the unity engine
