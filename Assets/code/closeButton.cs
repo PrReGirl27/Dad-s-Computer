@@ -22,7 +22,7 @@ public class closeButton : MonoBehaviour, IDragHandler, IPointerDownHandler
         {
             panel.SetActive(false);
             active = false;
-
+// closes the panel
         }
 
     }
@@ -34,7 +34,7 @@ public class closeButton : MonoBehaviour, IDragHandler, IPointerDownHandler
         Debug.Log("notclciked");
     }
 
-
+// when ever the close button is clicked it will close the panel; if the player tries to drag the close button nothing will happen
 
 
 
