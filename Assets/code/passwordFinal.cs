@@ -33,7 +33,7 @@ public class passwordFinal : MonoBehaviour // the is for the final password of t
         //if the password is correct
             Debug.Log("correct");
             code.text = "Correct";
-            StartCoroutine(RightAnswer(0.5f));
+            StartCoroutine(RightAnswer(0.5f)); // 2 seconds delay
             right.Play();
         }
         else
