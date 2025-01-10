@@ -34,14 +34,13 @@ public class passwordFinal : MonoBehaviour // this is for the final password of 
             Debug.Log("correct");
             code.text = "Correct";
             StartCoroutine(RightAnswer(0.5f)); // 2 seconds delay
-            right.Play();
+            right.Play(); // play correct sound
         }
         else
         {
 //if the password is wrong
             code.text = "Incorrect";
-            wrong.Play();
-
+            wrong.Play(); // play wrong sound
             StartCoroutine(ClearTextAfterDelay(0.5f)); // 2 seconds delay; afterwads the text will clear
         }
     }
@@ -58,8 +57,8 @@ public class passwordFinal : MonoBehaviour // this is for the final password of 
     IEnumerator RightAnswer(float delay)
     {
 
-        yield return new WaitForSeconds(delay);
-        SceneManager.LoadScene("Final");
+        yield return new WaitForSeconds(delay); // wait for 2 second for the text field to say correct
+        SceneManager.LoadScene("Final"); // load the final scene
 
 // loads the last sense of the game
         code.text = password;
