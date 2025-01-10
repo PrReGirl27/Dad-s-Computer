@@ -11,10 +11,12 @@ public class openClose : MonoBehaviour
     { 
     if (active==false)
         {
+        // if the panel is closed then the button clicked will open the panel
             gameObject.transform.gameObject.SetActive(true);
             active = true;
         }
     else  {
+     // if the panel is opened then the button clicked will close the panel
             gameObject.transform.gameObject.SetActive(false);
             active = false;
            
