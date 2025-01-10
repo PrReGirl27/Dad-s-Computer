@@ -30,7 +30,7 @@ public class passwordFinal : MonoBehaviour // the is for the final password of t
     {
         if (code.text == password)
         {
-        //if the pass word is correct
+        //if the password is correct
             Debug.Log("correct");
             code.text = "Correct";
             StartCoroutine(RightAnswer(0.5f));
