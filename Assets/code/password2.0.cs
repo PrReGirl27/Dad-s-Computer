@@ -30,19 +30,20 @@ public class password2 : MonoBehaviour
     {
         if (code.text == password)
         {
+           //if the password is correct
             Debug.Log("correct");
             code.text = "Correct";
-            StartCoroutine(RightAnswer(0.5f));
+            StartCoroutine(RightAnswer(0.5f)); // 2 seconds delay
             right.Play();
         }
         else
         {
-
+//if the password is wrong
             code.text = "Incorrect";
             wrong.Play();
           
 
-            StartCoroutine(ClearTextAfterDelay(0.5f)); // 2 seconds delay
+            StartCoroutine(ClearTextAfterDelay(0.5f)); // 2 seconds delay; afterwads the text will clear
         }
     }
 
@@ -61,7 +62,7 @@ public class password2 : MonoBehaviour
         yield return new WaitForSeconds(delay);
 
 
-        openNew.SetActive(true);
+        openNew.SetActive(true); // open a new panel
         code.text = password;
 
     }
