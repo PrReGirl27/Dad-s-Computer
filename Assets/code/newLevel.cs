@@ -6,22 +6,22 @@ using UnityEngine.SceneManagement;
 public class newLevel : MonoBehaviour
 {
     // Start is called before the first frame update
-   public void LoadNewLevelComputer ()
+   public void LoadNewLevelComputer () // load a new scene
     {
         SceneManager.LoadScene("Computer");
     }
 
-    public void LoadNewLevelBeforeyoustart()
+    public void LoadNewLevelBeforeyoustart() // load a new scene
     {
-        SceneManager.LoadScene("BeforeYouStart");
+        SceneManager.LoadScene("BeforeYouStart"); 
     }
 
-    public void LoadNewLevelMainMenu()
+    public void LoadNewLevelMainMenu() // load a new scene
     {
         SceneManager.LoadScene("MainMenu");
     }
 
-    public void LoadNewLevelHowToPlay()
+    public void LoadNewLevelHowToPlay() // load a new scene
     {
         SceneManager.LoadScene("HowToPlay");
     }
